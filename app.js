@@ -27,7 +27,7 @@ const products = [
     { id: 5, name: 'Кепка Classic', price: 490, category: 'Аксессуары',
       img: ['https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500'] },
     { id: 6, name: 'Кроссовки Flair', price: 1299, category: 'Обувь',
-      img: ['https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500'] },
+      img: ['file_000000004e0481f49f446dcad0ccbace.png'] },
 ];
 
 let cart = {};
