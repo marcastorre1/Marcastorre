@@ -22,7 +22,7 @@ const products = [
       img: ['IMG_20260913_124224_923.jpg'] },
     { id: 3, name: 'Джинсы Slim Blue', price: 1890, category: 'Джинсы',
       img: ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=500'] },
-    { id: 4, name: 'Куртка Bomber', price: 2790, category: 'Куртки',
+    { id: 4, name: 'Куртка Bomber', price: 2790, category: 'Куртки,желетки',
       img: ['https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500'] },
     { id: 5, name: 'Кепка Classic', price: 490, category: 'Аксессуары',
       img: ['https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500'] },
