@@ -7,7 +7,7 @@ tg.expand();
 // ============================================
 
 // Твой ник в Telegram БЕЗ @
-const MANAGER_USERNAME = 'missed58';
+const MANAGER_USERNAME = 'markulik52';
 
 // Курс: сколько MDL в 1 EUR (поменяй на актуальный!)
 const EUR_RATE = 19.5;
