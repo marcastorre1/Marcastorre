@@ -35,6 +35,15 @@ const products = [
       img: ['file_00000000181481f5a015453727117b7b.png'] },
     { id: 9, name: 'Худи Stone Island', price: 0, category: 'Худи,свитера', 
       img: ['file_0000000031a88243bff9fe3c32dbbf1f.png'] },
+    { id: 10, name: 'Пуховик C.P. Company', price: 0, category: 'Куртки,желетки', 
+     img: ['file_00000000557c82439a29b03a3ae5086c.png'] },
+    { id: 11, name: 'Пуховик C.P. Company', price: 0, category: 'Куртки,желетки', 
+     img: ['file_00000000f6dc81f491aaf49b2247c40a.png'] },
+    { id: 12, name: 'Пуховик C.P. Company', price: 0, category: 'Куртки,желетки', 
+     img: ['file_0000000000688243831dc393b80515b9.png'] },
+    { id: 13, name: 'Худи Gucci', price: 0, category: 'Худи,свитера', 
+     img: ['file_00000000b08081f4918bbef138d73465.png'] },
+    
     // 👇 ТОВАРЫ ПОД ЗАКАЗ (price: 0)
     // { id: 7, name: 'Название', price: 0, category: 'Категория', img: ['foto.jpg'] },
 ];
