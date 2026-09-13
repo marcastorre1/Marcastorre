@@ -81,6 +81,18 @@ const products = [
      img: ['file_0000000017f882108e63343618f6b44f.png'] },
     { id: 32, name: 'Свитер Stone Island', price: 0, category: 'Худи,свитера', 
      img: ['file_00000000d7408210bcbdeb6696863c5b.png'] },
+    { id: 33, name: 'Майка Hellstar', price: 0, category: 'Футболки', 
+     img: ['file_000000000e2481f481a4444da8f36e5a.png'] },
+    { id: 34, name: 'Майка Diesel', price: 0, category: 'Футболки', 
+     img: ['IMG_20260913_201621_335.jpg'] },
+    { id: 35, name: 'Свитер Mertra', price: 0, category: 'Худи,свитера', 
+     img: ['IMG_20260913_201738_694.jpg'] },
+    { id: 36, name: 'Штаны Mertra', price: 0, category: 'Джинсы,Штаны', 
+     img: ['IMG_20260913_201910_614.jpg'] },
+    { id: 37, name: 'Ветровка Jordan', price: 0, category: 'Куртки,желетки', 
+     img: ['IMG_20260913_202034_493.jpg'] },
+    { id: 38, name: 'Костюм Corteiz', price: 0, category: 'Костюмы', 
+     img: ['file_00000000ef3881f48f5b9e230dbc6530.png'] },
     // 👇 ТОВАРЫ ПОД ЗАКАЗ (price: 0)
     // { id: 7, name: 'Название', price: 0, category: 'Категория', img: ['foto.jpg'] },
 ];
