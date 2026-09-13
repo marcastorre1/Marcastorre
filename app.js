@@ -20,7 +20,7 @@ const products = [
       img: ['file_0000000055b8820a9d7fe1163755e8a1.png'] },
     { id: 2, name: 'Худи Nike', price: 799, category: 'Худи',
       img: ['IMG_20260913_124224_923.jpg'] },
-    { id: 3, name: 'Джинсы Slim Blue', price: 1890, category: 'Джинсы',
+    { id: 3, name: 'Джинсы Slim Blue', price: 1890, category: 'Джинсы,Штаны',
       img: ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=500'] },
     { id: 4, name: 'Жилетка  Under Armour', price: 1798, category: 'Куртки,желетки',
       img: ['file_00000000a8488243bab915e35a4ae0a4.png'] },
