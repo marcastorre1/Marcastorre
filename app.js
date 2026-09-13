@@ -19,7 +19,7 @@ const EUR_RATE = 19.9;
 const products = [
     { id: 1, name: 'майка Flair', price: 499, category: 'Футболки',
       img: ['file_0000000055b8820a9d7fe1163755e8a1.png'] },
-    { id: 2, name: 'Худи Nike', price: 799, category: 'Худи',
+    { id: 2, name: 'Худи Nike', price: 799, category: 'Худи,свитера',
       img: ['IMG_20260913_124224_923.jpg'] },
     { id: 3, name: 'Штаны Polo Ralph Lauren', price: 0, category: 'Джинсы,Штаны',
       img: ['file_00000000f28c82438ec9dfc883bc7e97.png'] },
@@ -31,6 +31,10 @@ const products = [
       img: ['file_000000004e0481f49f446dcad0ccbace.png'] },
     { id: 7, name: 'Штаны Essentials', price: 0, category: 'Джинсы,Штаны', 
       img: ['file_00000000a57881f49ae0e2d55384c949.png'] },
+    { id: 8, name: 'Свитер Stone Island', price: 0, category: 'Худи,свитера', 
+      img: ['file_00000000181481f5a015453727117b7b.png'] },
+    { id: 9, name: 'Худи Stone Island', price: 0, category: 'Худи,свитера', 
+      img: ['file_0000000031a88243bff9fe3c32dbbf1f.png'] },
     // 👇 ТОВАРЫ ПОД ЗАКАЗ (price: 0)
     // { id: 7, name: 'Название', price: 0, category: 'Категория', img: ['foto.jpg'] },
 ];
