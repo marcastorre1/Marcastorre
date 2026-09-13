@@ -69,6 +69,18 @@ const products = [
      img: ['file_000000004b248210b518da16ac1e22fd.png'] },
     { id: 26, name: 'Куртка/ветровка C.P. Company', price: 0, category: 'Куртки,желетки', 
      img: ['IMG_20260913_193500_540.jpg'] },
+    { id: 27, name: 'Кофта C.P. Company', price: 0, category: 'Куртки,желетки', 
+     img: ['file_0000000058c08210b88e03df2d138e53.png'] },
+    { id: 28, name: 'Ветровка C.P. Company', price: 0, category: 'Куртки,желетки', 
+     img: ['file_0000000042988246aa63c9477afdc9cc.png'] },
+    { id: 29, name: 'Ветровка Stone Island', price: 0, category: 'Куртки,желетки', 
+     img: ['file_000000009a9c81f683d109a3a2fd1d5d.png'] },
+    { id: 30, name: 'Свитер Stone Island', price: 0, category: 'Худи,свитера', 
+     img: ['IMG_20260913_195052_392.jpg'] },
+    { id: 31, name: 'Костюм Corteiz', price: 0, category: 'Костюмы', 
+     img: ['file_0000000017f882108e63343618f6b44f.png'] },
+    { id: 32, name: 'Свитер Stone Island', price: 0, category: 'Худи,свитера', 
+     img: ['file_00000000d7408210bcbdeb6696863c5b.png'] },
     // 👇 ТОВАРЫ ПОД ЗАКАЗ (price: 0)
     // { id: 7, name: 'Название', price: 0, category: 'Категория', img: ['foto.jpg'] },
 ];
