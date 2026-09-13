@@ -10,13 +10,13 @@ tg.expand();
 const MANAGER_USERNAME = 'markulik52';
 
 // Курс: сколько MDL в 1 EUR (поменяй на актуальный!)
-const EUR_RATE = 19.5;
+const EUR_RATE = 19.9;
 
 // ============================================
 // ТОВАРЫ
 // ============================================
 const products = [
-    { id: 1, name: 'Футболка Oversize Black', price: 890, category: 'Футболки',
+    { id: 1, name: 'майка Flair', price: 499, category: 'Футболки',
       img: ['https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500'] },
     { id: 2, name: 'Худи Nike', price: 799, category: 'Худи',
       img: ['IMG_20260913_124224_923.jpg'] },
