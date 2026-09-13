@@ -29,7 +29,7 @@ const products = [
       img: ['https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500'] },
     { id: 6, name: 'Кроссовки Flair', price: 1299, category: 'Обувь',
       img: ['file_000000004e0481f49f446dcad0ccbace.png'] },
-    { id: 7, name: 'Штаны Essentials', price: 0, category: 'Джинсы,Штаны', img: ['имя-файла.jpg'] },
+    { id: 7, name: 'Штаны Essentials', price: 0, category: 'Джинсы,Штаны', img: ['file_00000000a57881f49ae0e2d55384c949.png'] },
     // 👇 ТОВАРЫ ПОД ЗАКАЗ (price: 0)
     // { id: 7, name: 'Название', price: 0, category: 'Категория', img: ['foto.jpg'] },
 ];
