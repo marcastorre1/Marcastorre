@@ -26,7 +26,7 @@ const products = [
       img: ['file_00000000a8488243bab915e35a4ae0a4.png'] },
     { id: 5, name: 'Кепка Classic', price: 490, category: 'Аксессуары',
       img: ['https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500'] },
-    { id: 6, name: 'Кроссовки Runner', price: 3290, category: 'Обувь',
+    { id: 6, name: 'Кроссовки Flair', price: 1299, category: 'Обувь',
       img: ['https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500'] },
 ];
 
