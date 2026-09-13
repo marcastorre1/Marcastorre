@@ -17,7 +17,7 @@ const EUR_RATE = 19.9;
 // ============================================
 const products = [
     { id: 1, name: 'майка Flair', price: 499, category: 'Футболки',
-      img: ['https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500'] },
+      img: ['file_0000000055b8820a9d7fe1163755e8a1.png'] },
     { id: 2, name: 'Худи Nike', price: 799, category: 'Худи',
       img: ['IMG_20260913_124224_923.jpg'] },
     { id: 3, name: 'Джинсы Slim Blue', price: 1890, category: 'Джинсы',
