@@ -21,7 +21,7 @@ const products = [
     { id: 2, name: 'Худи Nike', price: 799, category: 'Худи',
       img: ['IMG_20260913_124224_923.jpg'] },
     { id: 3, name: 'Штаны Polo Ralph Lauren', price: 799 , category: 'Джинсы,Штаны',
-      img: ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=500'] },
+      img: ['file_00000000f28c82438ec9dfc883bc7e97.png'] },
     { id: 4, name: 'Жилетка  Under Armour', price: 1798, category: 'Куртки,желетки',
       img: ['file_00000000a8488243bab915e35a4ae0a4.png'] },
     { id: 5, name: 'Кепка Classic', price: 490, category: 'Аксессуары',
