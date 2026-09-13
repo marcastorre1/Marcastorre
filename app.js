@@ -43,7 +43,18 @@ const products = [
      img: ['file_0000000000688243831dc393b80515b9.png'] },
     { id: 13, name: 'Худи Gucci', price: 0, category: 'Худи,свитера', 
      img: ['file_00000000b08081f4918bbef138d73465.png'] },
-    
+    { id: 14, name: 'Свитер Stone Island', price: 0, category: 'Худи,свитера', 
+     img: ['file_00000000de5081f487d71cf9561c667f.png'] },
+    { id: 15, name: 'Кофта Stone Island', price: 0, category: 'Куртки,желетки', 
+     img: ['file_00000000b20c820c8de4423512fb12a3.png'] },
+    { id: 16, name: 'Полузамок Stone Island', price: 0, category: 'Худи,свитера', 
+     img: ['file_00000000a770820abd9c574b67670992.png'] },
+    { id: 17, name: 'Ветровка Arc’teryx', price: 0, category: 'Куртки,желетки', 
+     img: ['file_0000000074f481f484d96ef0806d5f7c.png'] },
+    { id: 18, name: 'Кардиган Moncler', price: 0, category: 'Куртки,желетки', 
+     img: ['file_0000000073e881fb8dc40c335d2bafef.png'] },
+    { id: 19, name: 'Пуховик Stone Island', price: 0, category: 'Куртки,желетки', 
+     img: ['file_000000003158821094ac409bc6e817e5.png'] },
     // 👇 ТОВАРЫ ПОД ЗАКАЗ (price: 0)
     // { id: 7, name: 'Название', price: 0, category: 'Категория', img: ['foto.jpg'] },
 ];
