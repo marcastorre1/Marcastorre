@@ -14,20 +14,24 @@ const EUR_RATE = 19.9;
 
 // ============================================
 // ТОВАРЫ
+// price: 0  →  товар "Под заказ"
 // ============================================
 const products = [
     { id: 1, name: 'майка Flair', price: 499, category: 'Футболки',
       img: ['file_0000000055b8820a9d7fe1163755e8a1.png'] },
     { id: 2, name: 'Худи Nike', price: 799, category: 'Худи',
       img: ['IMG_20260913_124224_923.jpg'] },
-    { id: 3, name: 'Штаны Polo Ralph Lauren', price: 799 , category: 'Джинсы,Штаны',
+    { id: 3, name: 'Штаны Polo Ralph Lauren', price: 0, category: 'Джинсы,Штаны',
       img: ['file_00000000f28c82438ec9dfc883bc7e97.png'] },
-    { id: 4, name: 'Жилетка  Under Armour', price: 1798, category: 'Куртки,желетки',
+    { id: 4, name: 'Жилетка Under Armour', price: 1798, category: 'Куртки,желетки',
       img: ['file_00000000a8488243bab915e35a4ae0a4.png'] },
     { id: 5, name: 'Кепка Classic', price: 490, category: 'Аксессуары',
       img: ['https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500'] },
     { id: 6, name: 'Кроссовки Flair', price: 1299, category: 'Обувь',
       img: ['file_000000004e0481f49f446dcad0ccbace.png'] },
+
+    // 👇 ТОВАРЫ ПОД ЗАКАЗ (price: 0)
+    // { id: 7, name: 'Название', price: 0, category: 'Категория', img: ['foto.jpg'] },
 ];
 
 let cart = {};
@@ -51,6 +55,11 @@ function toEur(mdl) {
 // ============================================
 function cardTemplate(p) {
     const firstImg = getImages(p)[0];
+    const priceHtml = p.price > 0
+        ? `<div class="price">${toEur(p.price)} €</div>
+           <div class="price-eur">${p.price} MDL</div>`
+        : `<div class="price">Под заказ</div>
+           <div class="price-eur">Цена по запросу</div>`;
     return `
         <div class="card-img-wrap">
             <img src="${firstImg}" alt="${p.name}" loading="lazy"
@@ -59,8 +68,7 @@ function cardTemplate(p) {
         </div>
         <div class="card-info">
             <h3>${p.name}</h3>
-            <div class="price">${toEur(p.price)} €</div>
-            <div class="price-eur">${p.price} MDL</div>
+            ${priceHtml}
         </div>
     `;
 }
@@ -149,18 +157,42 @@ document.body.addEventListener('click', (e) => {
 // ============================================
 function updateCart() {
     let count = 0, total = 0;
+    let hasOnOrder = false;
+
     for (const id in cart) {
         const p = products.find(prod => prod.id === Number(id));
         count += cart[id];
-        total += p.price * cart[id];
+        if (p.price > 0) {
+            total += p.price * cart[id];
+        } else {
+            hasOnOrder = true;
+        }
     }
     const eurTotal = toEur(total);
 
     document.getElementById('cartBadge').innerText = count;
     document.getElementById('barCount').innerText = count;
-    document.getElementById('barTotal').innerText = `${eurTotal} € (${total} MDL)`;
-    document.getElementById('modalTotal').innerHTML =
-        `${eurTotal} €<br><span style="font-size:13px;opacity:0.6;font-weight:500;">${total} MDL</span>`;
+
+    let barTotalText;
+    if (total > 0 && hasOnOrder) {
+        barTotalText = `${eurTotal} € + под заказ`;
+    } else if (total > 0) {
+        barTotalText = `${eurTotal} € (${total} MDL)`;
+    } else {
+        barTotalText = 'Под заказ';
+    }
+    document.getElementById('barTotal').innerText = barTotalText;
+
+    if (total > 0 && hasOnOrder) {
+        document.getElementById('modalTotal').innerHTML =
+            `${eurTotal} €<br><span style="font-size:12px;opacity:0.6;font-weight:500;">+ товары под заказ</span>`;
+    } else if (total > 0) {
+        document.getElementById('modalTotal').innerHTML =
+            `${eurTotal} €<br><span style="font-size:13px;opacity:0.6;font-weight:500;">${total} MDL</span>`;
+    } else {
+        document.getElementById('modalTotal').innerHTML = 'Под заказ';
+    }
+
     renderCartItems();
 }
 
@@ -174,13 +206,16 @@ function renderCartItems() {
     for (const id in cart) {
         const p = products.find(prod => prod.id === Number(id));
         const firstImg = getImages(p)[0];
+        const priceText = p.price > 0
+            ? `${toEur(p.price)} € · ${p.price} MDL`
+            : 'Под заказ';
         const item = document.createElement('div');
         item.className = 'cart-item';
         item.innerHTML = `
             <img src="${firstImg}" alt="${p.name}">
             <div class="cart-item-info">
                 <h4>${p.name}</h4>
-                <span>${toEur(p.price)} € · ${p.price} MDL</span>
+                <span>${priceText}</span>
             </div>
             <div class="qty-controls">
                 <button data-action="minus" data-id="${p.id}">−</button>
@@ -235,18 +270,35 @@ document.getElementById('checkoutBtn').addEventListener('click', () => {
 
     const order = [];
     let total = 0;
+    let hasOnOrder = false;
+
     for (const id in cart) {
         const p = products.find(prod => prod.id === Number(id));
         order.push({ name: p.name, price: p.price, qty: cart[id], sum: p.price * cart[id] });
-        total += p.price * cart[id];
+        if (p.price > 0) {
+            total += p.price * cart[id];
+        } else {
+            hasOnOrder = true;
+        }
     }
 
     const eurTotal = toEur(total);
     const orderText = order.map(i =>
-        `• ${i.name} × ${i.qty} — ${toEur(i.sum)} € (${i.sum} MDL)`
+        i.price > 0
+            ? `• ${i.name} × ${i.qty} — ${toEur(i.sum)} € (${i.sum} MDL)`
+            : `• ${i.name} × ${i.qty} — Под заказ`
     ).join('\n');
 
-    const message = `Здравствуйте! Хочу оформить заказ в marca.storre:\n\n${orderText}\n\nИтого: ${eurTotal} € (${total} MDL)`;
+    let totalText;
+    if (total > 0 && hasOnOrder) {
+        totalText = `${eurTotal} € (${total} MDL) + товары под заказ`;
+    } else if (total > 0) {
+        totalText = `${eurTotal} € (${total} MDL)`;
+    } else {
+        totalText = 'Всё под заказ';
+    }
+
+    const message = `Здравствуйте! Хочу оформить заказ в marca.storre:\n\n${orderText}\n\nИтого: ${totalText}`;
 
     cartModal.classList.remove('open');
     managerModal.classList.add('open');
